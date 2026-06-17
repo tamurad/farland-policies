@@ -11,7 +11,7 @@
     <header>
       <p class="brand">Farland History</p>
       <h1>プライバシーポリシー</h1>
-      <p class="updated">最終更新日: 2026年6月17日</p>
+      <p class="updated">最終更新日: 2026年6月18日 (AdMob SDK 導入に伴う追記)</p>
     </header>
 
     <p>
@@ -33,10 +33,19 @@
 
     <h3>1.2 自動的に取得する情報</h3>
     <ul>
-      <li><strong>匿名識別子 (UUID)</strong> — 初回起動時に自動生成し、 アカウント単位での識別に使用します。 端末固有情報や広告 ID とは紐付きません。</li>
+      <li><strong>匿名識別子 (UUID)</strong> — 初回起動時に自動生成し、 アカウント単位での識別に使用します。 運営者が直接管理するこの ID は端末固有情報や広告 ID とは紐付きません。</li>
       <li><strong>ゲーム進捗データ</strong> — レベル、 ステータス、 所持装備、 ゴールド、 街の支配状況、 戦闘ログ等。</li>
       <li><strong>アクセスログ</strong> — サーバーへの API リクエスト時刻、 IP アドレス、 ユーザーエージェント情報 (アクセス解析と不正対策のため)。</li>
     </ul>
+
+    <h3>1.3 広告 SDK (Google AdMob) が取得する情報</h3>
+    <p>本アプリでリワード広告を表示する際、 Google LLC が提供する Google AdMob SDK が以下の情報を取得します。 これらは Google LLC によって管理され、 運営者は直接アクセスしません。</p>
+    <ul>
+      <li><strong>広告識別子 (IDFA / GAID)</strong> — iOS の Identifier for Advertisers / Android の Google Advertising ID。 パーソナライズド広告の配信に使用されます。 利用者の許可がない場合はトラッキングしない一般広告のみ表示されます。</li>
+      <li><strong>デバイス情報</strong> — 端末モデル、 OS バージョン、 言語設定、 おおまかな地域 (国レベル)、 IP アドレス。</li>
+      <li><strong>広告関連の操作情報</strong> — 広告の表示・視聴完了・タップ等のイベント。</li>
+    </ul>
+    <p>詳細は <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">Google AdMob のデータ取扱いに関するヘルプ</a> および <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google プライバシーポリシー</a> をご参照ください。</p>
 
     <h2>2. 利用目的</h2>
     <p>取得した情報は、 以下の目的のためにのみ利用します。</p>
@@ -47,6 +56,7 @@
       <li>サービス改善のための統計解析 (個人を特定しない集計データとして利用)</li>
       <li>利用者からのお問い合わせへの対応</li>
       <li>重要な変更 (規約改定、 サービス終了等) の利用者への通知</li>
+      <li>リワード広告の表示・視聴完了報酬の付与 (スタミナ回復、 ガチャ追加抽選、 アイコン変更等の機能で利用)</li>
     </ol>
 
     <h2>3. 第三者提供</h2>
@@ -65,6 +75,9 @@
     <ul>
       <li><strong>Supabase Inc.</strong> — データベースおよび認証基盤の提供。 利用者情報 (メールアドレス、 パスワードハッシュ、 ゲームデータ等) はこのサービス上に保存されます。
       <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase プライバシーポリシー</a></li>
+      <li><strong>Google LLC (Google AdMob)</strong> — リワード広告 SDK の提供。 広告識別子、 デバイス情報、 IP アドレス、 広告操作イベント等を Google LLC が独自に取得・管理します (本ポリシー 1.3 参照)。
+      <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google プライバシーポリシー</a> /
+      <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">AdMob データ取扱い</a></li>
       <li><strong>Apple Inc. (App Store)</strong> — iOS 版の配信、 アプリ内課金処理 (将来予定)。
       <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple プライバシーポリシー</a></li>
       <li><strong>Google LLC (Google Play)</strong> — Android 版の配信、 アプリ内課金処理 (将来予定)。
@@ -72,9 +85,10 @@
     </ul>
 
     <div class="note">
-      <strong>将来予告:</strong> 広告 SDK (Google AdMob 等) を導入する際には、 SDK 提供事業者を本一覧に追加し、
-      取得情報 / 利用目的の詳細を本ポリシーに追記します。 ATT (App Tracking Transparency) によるトラッキング許可が必要となる場合は、
-      アプリ内ダイアログでの明示同意を経たうえで利用します。
+      <strong>App Tracking Transparency (ATT) について (iOS のみ):</strong>
+      iOS 利用者には、 パーソナライズド広告のためにトラッキングを利用する旨を OS 標準のダイアログで提示し、 同意を得たうえで広告識別子 (IDFA) を取得します。
+      拒否された場合もリワード広告自体は利用可能で、 パーソナライズされない一般広告として表示されます。
+      設定アプリの「プライバシーとセキュリティ → トラッキング」 からいつでも変更できます。
     </div>
 
     <h2>5. 国外へのデータ移転</h2>
